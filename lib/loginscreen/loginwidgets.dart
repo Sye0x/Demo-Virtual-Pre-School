@@ -12,26 +12,67 @@ class LoginWidgets extends StatelessWidget {
         Text(
           "Login",
           style: TextStyle(
-            color: Color.fromARGB(255, 218, 18, 18),
+            color: Color(0xFF8C5FF5),
             fontSize: 24, // Added font size
             fontWeight: FontWeight.bold, // Added font weight
           ),
         ),
         SizedBox(height: 30),
-        TextField(
-          decoration: InputDecoration(
-            labelText: "Username",
-            border: OutlineInputBorder(),
+        Material(
+          elevation: 8.0,
+          shadowColor: Colors.black54,
+          borderRadius: BorderRadius.circular(55),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Username",
+
+              labelStyle: TextStyle(
+                color: Color(0xFF8C5FF5),
+              ), // Added label color
+              fillColor: const Color.fromARGB(202, 245, 245, 245),
+              filled: true,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(55),
+                borderSide: BorderSide.none,
+              ),
+            ),
           ),
         ),
         SizedBox(height: 30), // Added spacing
-        TextField(
-          decoration: InputDecoration(
-            labelText: "Password",
-            border: OutlineInputBorder(),
+        Material(
+          elevation: 8.0,
+          shadowColor: Colors.black54,
+          borderRadius: BorderRadius.circular(55),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Password",
+              labelStyle: TextStyle(
+                color: Color(0xFF8C5FF5),
+              ), // Added label color
+              fillColor: const Color.fromARGB(202, 245, 245, 245),
+              filled: true,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(55),
+                borderSide: BorderSide.none,
+              ),
+            ),
           ),
         ),
-        Row(children: [ElevatedButton(onPressed: null, child: Text("Login"))]),
+        SizedBox(height: 30),
+        Row(
+          children: [
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xFF8C5FF5),
+                foregroundColor: Color(0xFFFFFFFF),
+                elevation: 8,
+                shadowColor: Color(0xFF8C5FF5),
+              ),
+              child: Text("Login"),
+            ),
+          ],
+        ),
       ],
     );
   }
