@@ -16,6 +16,7 @@ class RegisterScreen extends StatelessWidget {
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         // Added Center widget
         child:

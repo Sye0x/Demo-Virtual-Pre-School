@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:demo_vps/loginscreen/loginscreen.dart';
 
 // Class name should be PascalCase
 class Registerwidget extends StatelessWidget {
