@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       home: Scaffold(
+        backgroundColor: Colors.white,
         resizeToAvoidBottomInset:
             false, // Prevent resizing when keyboard appears
         body: const LoginScreen(), // Fixed casing
