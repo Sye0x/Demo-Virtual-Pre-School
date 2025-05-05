@@ -100,19 +100,7 @@ class Registerwidget extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(left: 10, top: 20),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Forgot Password?",
-            style: TextStyle(
-              color: Color(0xFF8C5FF5),
-              fontSize: 14, // Added font size
-              fontWeight: FontWeight.bold, // Added font weight
-            ),
-          ),
-        ),
-        SizedBox(height: 30),
+        SizedBox(height: 30), // Added spacing
         Row(
           children: [
             ElevatedButton(

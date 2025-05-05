@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_vps/registerscreen/registerscreen.dart';
+import 'package:demo_vps/rpscreens/chooseuser.dart';
 
 // Class name should be PascalCase
 class LoginWidgets extends StatelessWidget {
@@ -75,7 +76,12 @@ class LoginWidgets extends StatelessWidget {
         Row(
           children: [
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ChooseUser()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF8C5FF5),
                 foregroundColor: Color(0xFFFFFFFF),
