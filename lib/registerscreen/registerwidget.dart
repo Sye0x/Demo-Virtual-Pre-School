@@ -1,3 +1,4 @@
+import 'package:demo_vps/primarybuttonwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_vps/inputfieldwidget.dart';
 
@@ -29,16 +30,7 @@ class Registerwidget extends StatelessWidget {
         SizedBox(height: 30), // Added spacing
         Row(
           children: [
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF8C5FF5),
-                foregroundColor: Color(0xFFFFFFFF),
-                elevation: 8,
-                shadowColor: Color(0xFF8C5FF5),
-              ),
-              child: Text("Register"),
-            ),
+            Primarybuttonwidget(run: () => {}, input: "Register"),
             SizedBox(width: 10),
             ElevatedButton(
               onPressed: () {

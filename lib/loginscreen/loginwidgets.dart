@@ -2,10 +2,19 @@ import 'package:demo_vps/inputfieldwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_vps/registerscreen/registerscreen.dart';
 import 'package:demo_vps/rpscreens/chooseuser.dart';
+import 'package:demo_vps/primarybuttonwidget.dart';
 
 // Class name should be PascalCase
 class LoginWidgets extends StatelessWidget {
   const LoginWidgets({super.key});
+
+  // Removed the run() method as it is not used and causes a compile error.
+  void login(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ChooseUser()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,22 +48,12 @@ class LoginWidgets extends StatelessWidget {
         SizedBox(height: 30),
         Row(
           children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ChooseUser()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF8C5FF5),
-                foregroundColor: Color(0xFFFFFFFF),
-                elevation: 8,
-                shadowColor: Color(0xFF8C5FF5),
-              ),
-              child: Text("Login"),
+            Primarybuttonwidget(
+              run: () => login(context), // Pass context to the login function
+              input: "Login",
             ),
             SizedBox(width: 10),
+
             ElevatedButton(
               onPressed: () {
                 Navigator.push(

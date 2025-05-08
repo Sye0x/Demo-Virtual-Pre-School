@@ -1,3 +1,4 @@
+import 'package:demo_vps/primarybuttonwidget.dart';
 import 'package:flutter/material.dart';
 
 class ChooseUser extends StatefulWidget {
@@ -113,29 +114,7 @@ class _ChooseUserState extends State<ChooseUser> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            // Your logic here
-                          },
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.resolveWith<
-                              Color
-                            >((Set<WidgetState> states) {
-                              if (states.contains(WidgetState.pressed)) {
-                                return Color(0xFF6A3ED9); // Darker when pressed
-                              }
-                              return Color(0xFF8C5FF5); // Default color
-                            }),
-                            foregroundColor: WidgetStateProperty.all<Color>(
-                              Colors.white,
-                            ),
-                            elevation: WidgetStateProperty.all<double>(8),
-                            shadowColor: WidgetStateProperty.all<Color>(
-                              Color(0xFF8C5FF5),
-                            ),
-                          ),
-                          child: Text("Continue"),
-                        ),
+                        Primarybuttonwidget(run: () => {}, input: "Continue"),
                       ],
                     ),
                   ],
