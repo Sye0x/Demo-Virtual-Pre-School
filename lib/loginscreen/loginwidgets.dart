@@ -1,7 +1,7 @@
 import 'package:demo_vps/customwidgets/inputfieldwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_vps/registerscreen/registerscreen.dart';
-import 'package:demo_vps/rpscreens/chooseuser.dart';
+import 'package:demo_vps/studentregisterform/registerform.dart';
 import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
 import 'package:demo_vps/customwidgets/secondarybuttonwidget.dart';
 
@@ -13,7 +13,7 @@ class LoginWidgets extends StatelessWidget {
   void login(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ChooseUser()),
+      MaterialPageRoute(builder: (context) => RegisterForm()),
     );
   }
 
