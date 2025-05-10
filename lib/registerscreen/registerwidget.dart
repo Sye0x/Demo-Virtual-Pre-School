@@ -1,10 +1,15 @@
-import 'package:demo_vps/primarybuttonwidget.dart';
+import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
+import 'package:demo_vps/customwidgets/secondarybuttonwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_vps/inputfieldwidget.dart';
+import 'package:demo_vps/customwidgets/inputfieldwidget.dart';
 
 // Class name should be PascalCase
 class Registerwidget extends StatelessWidget {
   const Registerwidget({super.key});
+
+  void back(BuildContext context) {
+    Navigator.pop(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +37,7 @@ class Registerwidget extends StatelessWidget {
           children: [
             Primarybuttonwidget(run: () => {}, input: "Register"),
             SizedBox(width: 10),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFFFFFFF),
-                foregroundColor: Color(0xFF8C5FF5),
-                elevation: 8,
-                shadowColor: Color(0xFF8C5FF5),
-              ),
-              child: Text("Login"),
-            ),
+            Secondarybuttonwidget(run: () => back(context), input: "Login"),
           ],
         ),
       ],

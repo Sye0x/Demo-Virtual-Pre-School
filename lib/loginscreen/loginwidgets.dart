@@ -1,8 +1,9 @@
-import 'package:demo_vps/inputfieldwidget.dart';
+import 'package:demo_vps/customwidgets/inputfieldwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_vps/registerscreen/registerscreen.dart';
 import 'package:demo_vps/rpscreens/chooseuser.dart';
-import 'package:demo_vps/primarybuttonwidget.dart';
+import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
+import 'package:demo_vps/customwidgets/secondarybuttonwidget.dart';
 
 // Class name should be PascalCase
 class LoginWidgets extends StatelessWidget {
@@ -13,6 +14,13 @@ class LoginWidgets extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => ChooseUser()),
+    );
+  }
+
+  void register(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => RegisterScreen()),
     );
   }
 
@@ -53,21 +61,12 @@ class LoginWidgets extends StatelessWidget {
               input: "Login",
             ),
             SizedBox(width: 10),
-
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegisterScreen()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFFFFFFF),
-                foregroundColor: Color(0xFF8C5FF5),
-                elevation: 8,
-                shadowColor: Color(0xFF8C5FF5),
-              ),
-              child: Text("Register"),
+            Secondarybuttonwidget(
+              run:
+                  () => register(
+                    context,
+                  ), // Pass context to the register function
+              input: "Register",
             ),
           ],
         ),
