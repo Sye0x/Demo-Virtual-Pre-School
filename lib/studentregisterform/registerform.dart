@@ -1,5 +1,6 @@
 import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
-import 'package:demo_vps/studentregisterform/registerformwidget.dart';
+import 'package:demo_vps/studentregisterform/registerformwidget1.dart';
+import 'package:demo_vps/studentregisterform/registerformwidget2.dart';
 import 'package:flutter/material.dart';
 
 class RegisterForm extends StatefulWidget {
@@ -11,11 +12,14 @@ class RegisterForm extends StatefulWidget {
 
 class RegisterFormState extends State<RegisterForm> {
   String buttonstr = "Next";
-
+  int i = 0;
   void forward(BuildContext context) {
     // Implement your registration logic here
     setState(() {
-      buttonstr = "Submit"; // You can update this based on some logic
+      i++;
+      if (i == 1) {
+        buttonstr = "Submit"; // You can update this based on some logic
+      }
     });
   }
 
@@ -37,8 +41,8 @@ class RegisterFormState extends State<RegisterForm> {
               ),
             ),
             const SizedBox(height: 30),
-            if (buttonstr == "Next") const RegisterFormWidget(),
-            if (buttonstr == "Submit") const SizedBox(height: 30),
+            if (i == 0) const RegisterFormWidget1(),
+            if (i == 1) const RegisterFormWidget2(),
             Primarybuttonwidget(run: () => forward(context), input: buttonstr),
           ],
         ),
