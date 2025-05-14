@@ -2,6 +2,7 @@ import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
 import 'package:demo_vps/studentregisterform/registerformwidget1.dart';
 import 'package:demo_vps/studentregisterform/registerformwidget2.dart';
 import 'package:flutter/material.dart';
+import 'package:demo_vps/admin/admindashboardscreen/admindashboardscreen.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
@@ -12,14 +13,18 @@ class RegisterForm extends StatefulWidget {
 
 class RegisterFormState extends State<RegisterForm> {
   String buttonstr = "Next";
-  int i = 0;
+
   void forward(BuildContext context) {
     // Implement your registration logic here
+    if (buttonstr == "Submit") {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const AdminDashboardScreen()),
+      );
+    }
+
     setState(() {
-      i++;
-      if (i == 1) {
-        buttonstr = "Submit"; // You can update this based on some logic
-      }
+      buttonstr = "Submit"; // You can update this based on some logic
     });
   }
 
@@ -41,8 +46,8 @@ class RegisterFormState extends State<RegisterForm> {
               ),
             ),
             const SizedBox(height: 30),
-            if (i == 0) const RegisterFormWidget1(),
-            if (i == 1) const RegisterFormWidget2(),
+            if (buttonstr == "Next") const RegisterFormWidget1(),
+            if (buttonstr == "Submit") const RegisterFormWidget2(),
             Primarybuttonwidget(run: () => forward(context), input: buttonstr),
           ],
         ),
