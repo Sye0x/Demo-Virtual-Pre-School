@@ -1,7 +1,6 @@
 // main.dart
 import 'package:flutter/material.dart';
 import 'package:demo_vps/loginscreen/loginscreen.dart';
-import 'package:demo_vps/admin/admindashboardscreen/admindashboardscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: AdminDashboardScreen(), // Fixed casing
+      home: LoginScreen(), // Fixed casing
     );
   }
 }
