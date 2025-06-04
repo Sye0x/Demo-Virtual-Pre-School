@@ -16,7 +16,7 @@ class Registerwidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.all(14.0),
+        padding: EdgeInsets.all(14.0.h),
         height: 600.h,
         width: 400.h,
         decoration: BoxDecoration(

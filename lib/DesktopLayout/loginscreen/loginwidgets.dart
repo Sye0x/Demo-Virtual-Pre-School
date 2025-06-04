@@ -27,9 +27,9 @@ class LoginWidgets extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.all(14.0),
-        height: 500.h,
-        width: 400.h,
+        padding: EdgeInsets.all(14.0.h),
+        height: 480.h,
+        width: 330.w,
         decoration: BoxDecoration(
           color: const Color.fromARGB(141, 233, 233, 233),
           borderRadius: BorderRadius.circular(20.r),
