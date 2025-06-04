@@ -1,8 +1,9 @@
-import 'package:demo_vps/DesktopLayout/loginscreen/loginwidgets.dart';
+import 'package:demo_vps/DesktopLayout/registerscreen.dart/registerwidget.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+// Class name should be PascalCase
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
         ),
-        child: const LoginWidgets(),
+        child: const Registerwidget(),
       ),
     );
   }

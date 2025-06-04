@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:demo_vps/DesktopLayout/registerscreen.dart/registerscreen.dart';
+import 'package:demo_vps/DesktopLayout/customwidgets/inputfieldwidget.dart';
 import 'package:demo_vps/DesktopLayout/customwidgets/primarybuttonwidget.dart';
 import 'package:demo_vps/DesktopLayout/customwidgets/secondarybuttonwidget.dart';
-import 'package:demo_vps/DesktopLayout/customwidgets/inputfieldwidget.dart';
 
 // Class name should be PascalCase
-class LoginWidgets extends StatelessWidget {
-  const LoginWidgets({super.key});
+class Registerwidget extends StatelessWidget {
+  const Registerwidget({super.key});
 
-  void login(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Scaffold()),
-    );
-  }
-
-  void register(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegisterScreen()),
-    );
+  void back(BuildContext context) {
+    Navigator.pop(context);
   }
 
   @override
@@ -28,7 +17,7 @@ class LoginWidgets extends StatelessWidget {
     return Center(
       child: Container(
         padding: EdgeInsets.all(14.0),
-        height: 500.h,
+        height: 600.h,
         width: 400.h,
         decoration: BoxDecoration(
           color: const Color.fromARGB(141, 233, 233, 233),
@@ -46,38 +35,29 @@ class LoginWidgets extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Login",
+              "Register",
               style: TextStyle(
                 fontSize: 50.sp,
-                color: Color(0xFFFFFFFFF),
+                color: Color(0xFFFFFFFF),
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 50.h),
+            SizedBox(height: 30.h),
             InputFieldWidget(input: "Username"),
             SizedBox(height: 30.h),
+            InputFieldWidget(input: "Email"),
+            SizedBox(height: 30.h),
+            InputFieldWidget(input: "Phone"),
+            SizedBox(height: 30.h),
             InputFieldWidget(input: "Password"),
-            SizedBox(height: 20.h),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Forgot Password",
-                  style: TextStyle(color: Color(0xFF8C5FF5)),
-                ),
-              ),
-            ),
-            SizedBox(height: 10.h),
+
+            SizedBox(height: 30.h),
             Row(
               spacing: 10.w,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Primarybuttonwidget(run: () => login(context), input: "Login"),
-                Secondarybuttonwidget(
-                  run: () => register(context),
-                  input: "Register",
-                ),
+                Primarybuttonwidget(run: () => {}, input: "Register"),
+                Secondarybuttonwidget(run: () => back(context), input: "Login"),
               ],
             ),
           ],
