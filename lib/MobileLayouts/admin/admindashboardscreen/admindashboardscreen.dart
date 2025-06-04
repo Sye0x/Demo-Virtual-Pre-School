@@ -1,5 +1,5 @@
-import 'package:demo_vps/customwidgets/dashboardheader.dart';
-import 'package:demo_vps/customwidgets/dashboardoptionscontainer.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/dashboardheader.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/dashboardoptionscontainer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 

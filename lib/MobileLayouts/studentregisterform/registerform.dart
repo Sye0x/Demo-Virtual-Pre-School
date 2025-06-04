@@ -1,8 +1,8 @@
-import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
-import 'package:demo_vps/studentregisterform/registerformwidget1.dart';
-import 'package:demo_vps/studentregisterform/registerformwidget2.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/primarybuttonwidget.dart';
+import 'package:demo_vps/MobileLayouts/studentregisterform/registerformwidget1.dart';
+import 'package:demo_vps/MobileLayouts/studentregisterform/registerformwidget2.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_vps/admin/admindashboardscreen/admindashboardscreen.dart';
+import 'package:demo_vps/MobileLayouts/admin/admindashboardscreen/admindashboardscreen.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});

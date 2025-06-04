@@ -1,9 +1,9 @@
-import 'package:demo_vps/customwidgets/inputfieldwidget.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/inputfieldwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_vps/registerscreen/registerscreen.dart';
-import 'package:demo_vps/studentregisterform/registerform.dart';
-import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
-import 'package:demo_vps/customwidgets/secondarybuttonwidget.dart';
+import 'package:demo_vps/MobileLayouts/registerscreen/registerscreen.dart';
+import 'package:demo_vps/MobileLayouts/studentregisterform/registerform.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/primarybuttonwidget.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/secondarybuttonwidget.dart';
 
 // Class name should be PascalCase
 class LoginWidgets extends StatelessWidget {

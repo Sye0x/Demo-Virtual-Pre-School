@@ -1,9 +1,9 @@
-import 'package:demo_vps/loginscreen/loginwidgets.dart';
+import 'package:demo_vps/MobileLayouts/registerscreen/registerwidget.dart';
 import 'package:flutter/material.dart';
 
 // Class name should be PascalCase
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,6 @@ class LoginScreen extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color(0xFFFFFFFF),
       body: Center(
         // Added Center widget
         child:
@@ -27,36 +26,41 @@ class LoginScreen extends StatelessWidget {
             // Background circles
             Positioned(
               top: -25,
-              left: -50,
-              child: buildCircle(170, 0xFF8C5FF5),
+              left: -10,
+              child: buildCircle(130, 0xFF8C5FF5),
             ),
             Positioned(
               top: -130,
-              right: -35,
+              right: -5,
               child: PhysicalModel(
                 elevation: 10.0,
                 color: Color(0xFF8C5FF5),
                 shape: BoxShape.circle,
-                child: buildCircle(335, 0xFF8C5FF5),
+                child: buildCircle(260, 0xFF8C5FF5),
               ),
             ),
 
             Positioned(
-              bottom: -40,
-              left: -40,
-              child: buildCircle(140, 0xFF8C5FF5),
+              bottom: -20,
+              left: -20,
+              child: buildCircle(80, 0xFF8C5FF5),
             ),
             Positioned(
-              bottom: 50,
-              left: 60,
+              bottom: 30,
+              left: 40,
               child: PhysicalModel(
                 elevation: 10.0,
                 color: Color(0xFF8C5FF5),
                 shape: BoxShape.circle,
-                child: buildCircle(69, 0xFF8C5FF5),
+                child: buildCircle(39, 0xFF8C5FF5),
               ),
             ),
-            Container(padding: EdgeInsets.all(20), child: LoginWidgets()),
+
+            Container(
+              margin: EdgeInsets.only(top: 50),
+              padding: EdgeInsets.all(20),
+              child: Registerwidget(),
+            ),
           ],
         ),
       ),

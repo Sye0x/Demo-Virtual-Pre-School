@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:demo_vps/customwidgets/inputfieldwidget.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/inputfieldwidget.dart';
 
 class RegisterFormWidget2 extends StatelessWidget {
   const RegisterFormWidget2({super.key});

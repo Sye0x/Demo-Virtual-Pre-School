@@ -1,7 +1,5 @@
-// main.dart
-import 'package:demo_vps/admin/admindashboardscreen/admindashboardscreen.dart';
+import 'package:demo_vps/responsive.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_vps/loginscreen/loginscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Helper method to build circles
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-
-      home: LoginScreen(), // Fixed casing
-    );
+    return Responsive();
   }
 }

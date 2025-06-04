@@ -1,7 +1,7 @@
-import 'package:demo_vps/customwidgets/primarybuttonwidget.dart';
-import 'package:demo_vps/customwidgets/secondarybuttonwidget.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/primarybuttonwidget.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/secondarybuttonwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_vps/customwidgets/inputfieldwidget.dart';
+import 'package:demo_vps/MobileLayouts/customwidgets/inputfieldwidget.dart';
 
 // Class name should be PascalCase
 class Registerwidget extends StatelessWidget {
