@@ -1,7 +1,6 @@
 import 'package:demo_vps/MobileLayouts/customwidgets/inputfieldwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_vps/MobileLayouts/registerscreen/registerscreen.dart';
-import 'package:demo_vps/MobileLayouts/studentregisterform/registerform.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:demo_vps/MobileLayouts/customwidgets/primarybuttonwidget.dart';
 import 'package:demo_vps/MobileLayouts/customwidgets/secondarybuttonwidget.dart';
 
@@ -9,68 +8,62 @@ import 'package:demo_vps/MobileLayouts/customwidgets/secondarybuttonwidget.dart'
 class LoginWidgets extends StatelessWidget {
   const LoginWidgets({super.key});
 
-  // Removed the run() method as it is not used and causes a compile error.
-  void login(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegisterForm()),
-    );
-  }
-
-  void register(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegisterScreen()),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center, // Center vertically
-      children: [
-        Text(
-          "Login",
-          style: TextStyle(
-            color: Color(0xFF8C5FF5),
-            fontSize: 40, // Added font size
-            fontWeight: FontWeight.bold, // Added font weight
-          ),
-        ),
-        SizedBox(height: 30),
-        InputFieldWidget(input: "Username"),
-        SizedBox(height: 30), // Added spacing
-        InputFieldWidget(input: "Password"),
-        Container(
-          margin: EdgeInsets.only(left: 10, top: 20),
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Forgot Password?",
-            style: TextStyle(
-              color: Color(0xFF8C5FF5),
-              fontSize: 14, // Added font size
-              fontWeight: FontWeight.bold, // Added font weight
-            ),
-          ),
-        ),
-        SizedBox(height: 30),
-        Row(
-          children: [
-            Primarybuttonwidget(
-              run: () => login(context), // Pass context to the login function
-              input: "Login",
-            ),
-            SizedBox(width: 10),
-            Secondarybuttonwidget(
-              run:
-                  () => register(
-                    context,
-                  ), // Pass context to the register function
-              input: "Register",
+    return Center(
+      child: Container(
+        padding: EdgeInsets.all(14.0),
+        height: 500.h,
+        width: 400.h,
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(141, 233, 233, 233),
+          borderRadius: BorderRadius.circular(20.r),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 7,
+              blurRadius: 7,
+              offset: Offset(0, 3), // changes position of shadow
             ),
           ],
         ),
-      ],
+        child: Column(
+          children: [
+            Text(
+              "Login",
+              style: TextStyle(
+                fontSize: 50.sp,
+                color: Color(0xFFFFFFFFF),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 60.h),
+            InputFieldWidget(input: "Username"),
+            SizedBox(height: 30.h),
+            InputFieldWidget(input: "Password"),
+            SizedBox(height: 10.h),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "Forgot Password",
+                  style: TextStyle(color: Color(0xFF8C5FF5)),
+                ),
+              ),
+            ),
+            SizedBox(height: 10.h),
+            Row(
+              spacing: 10.w,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Primarybuttonwidget(run: () => {}, input: "Login"),
+                Secondarybuttonwidget(run: () => {}, input: "Register"),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
