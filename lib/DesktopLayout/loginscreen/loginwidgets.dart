@@ -25,11 +25,14 @@ class LoginWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    final screenHeight = screenSize.height;
     return Center(
       child: Container(
         padding: EdgeInsets.all(14.0.h),
-        height: 480.h,
-        width: 330.w,
+        height: screenHeight * 0.6,
+        width: screenWidth * 0.25,
         decoration: BoxDecoration(
           color: const Color.fromARGB(141, 233, 233, 233),
           borderRadius: BorderRadius.circular(20.r),
